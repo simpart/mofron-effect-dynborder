@@ -1,0 +1,6 @@
+<setting>
+    <tag load="mofron-comp-heading">Heading</tag>
+    <tag load="mofron-effect-dynborder">DynBorder</tag>
+</setting>
+
+<Heading effect=DynBorder>Dynamic-Border-Effect</Heading>
