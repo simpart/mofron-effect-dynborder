@@ -45,7 +45,10 @@ module.exports = class extends mofron.class.Effect {
 	    prm.effect([
                 new Border({ speed: 500, position: 'left', width: '0.3rem', color: [35,50,235] }),
 		new Border({ position: 'bottom', color: [35,50,235] }),
-		new eWidth({ speed: 500, fromValue:'0%', toValue:'100%' })
+		new eWidth({
+		    speed: 500, fromValue:'0%',
+		    toValue:(undefined === prm.width()) ? '100%' : prm.width()
+		})
 	    ]);
 	    prm.text().visible(false);
 	    let fnt = prm.text().font();
