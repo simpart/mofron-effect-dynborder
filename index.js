@@ -50,14 +50,16 @@ module.exports = class extends mofron.class.Effect {
 		    toValue:(undefined === prm.width()) ? '100%' : prm.width()
 		})
 	    ]);
-	    prm.text().visible(false);
+            
+	    prm.height(prm.text().height());
+
 	    let fnt = prm.text().font();
 	    if (null === fnt) {
                 fnt = undefined;
             }
 	    prm.child(new OrderText({
 	        delay: 20,
-	        delayOffset: 300,
+	        delayOffset: 500,
 	        text: prm.text().toString(),
 		font: fnt,
 		size: prm.text().size(),
